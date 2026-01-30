@@ -27,20 +27,20 @@ def save_jobs_as_json(jobs: dict | list, file_name : str, save_path: str = "outp
 
 
 if __name__ == "__main__":
-    # browser_manager = Browser_Manager()
-    # browser = browser_manager.browser
+    browser_manager = Browser_Manager()
+    browser = browser_manager.browser
 
-    # bytedance_jobs = get_bytedance_jobs(browser)
+    bytedance_jobs = get_bytedance_jobs(browser)
 
-    # save_jobs_as_json(bytedance_jobs, "bytedance.json")
+    save_jobs_as_json(bytedance_jobs, "bytedance.json")
 
-    # ali_jobs = get_alibaba_jobs(browser) 
+    ali_jobs = get_alibaba_jobs(browser) 
 
-    # save_jobs_as_json(ali_jobs, "ali_star.json")
+    save_jobs_as_json(ali_jobs, "ali_star.json")
 
-    # tencent_jobs = get_tencent_jobs(browser)
+    tencent_jobs = get_tencent_jobs(browser)
 
-    # save_jobs_as_json(tencent_jobs , "tencent.json")
+    save_jobs_as_json(tencent_jobs , "tencent.json")
     
 
     ali_clean_json = clean_alibaba_star_jobs_json("output/ali_star.json")
@@ -49,4 +49,4 @@ if __name__ == "__main__":
 
     save_jobs_as_json(ali_clean_json, "ali_clean.json")
     save_jobs_as_json(bytedance_clean_json, "bytedance_clean.json")
-    save_jobs_as_json(ali_clean_json, "tencent_clean.json")
+    save_jobs_as_json(tencent_clean_json, "tencent_clean.json")
